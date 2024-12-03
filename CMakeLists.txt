@@ -9,7 +9,11 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 include_directories(${CMAKE_SOURCE_DIR}/include)
 
 # Define the executable
-add_executable(dsa_final src/main.cpp)
+add_executable(dsa_final src/main.cpp
+        lib/lib.cpp
+        lib/lib.h
+        test/test.cpp
+        test/test.h)
 
 # Link ws2_32 for HTTP functionality on Windows
 target_link_libraries(dsa_final PRIVATE ws2_32)
